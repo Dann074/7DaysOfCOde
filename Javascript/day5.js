@@ -1,8 +1,8 @@
 let fruits = []
 let frozen = []
-let lacticines = []
+let dairy = []
 let food = []
-let candy = []
+let sweets = []
 let welcome = ""
 let option = ""
 let name = ""
@@ -20,8 +20,8 @@ do {
         option = prompt(`What type of food you want to add?
       \n1- Fruit
       \n2- Frozen
-      \n3- Lacticine
-      \n4- Candy
+      \n3- Dairy
+      \n4- Sweets
       \n5- Exit
       \n${food}`)
         switch (option) {
@@ -34,12 +34,12 @@ do {
             frozen.push(name)
             break
           case "3":
-            name = prompt(`What's the name of the lacticine?\n${lacticines}`)
-            lacticines.push(name)
+            name = prompt(`What's the name of the dairy?\n${dairy}`)
+            dairy.push(name)
             break
           case "4":
-            name = prompt(`What's the name of the candy?\n${candy}`)
-            candy.push(name)
+            name = prompt(`What's the name of the candy?\n${sweets}`)
+            sweets.push(name)
             break
           case "5":
             alert(`Exiting...`)
@@ -47,7 +47,7 @@ do {
           default:
             alert(`Invalid entry, please retry`)
         }
-        food = [`Fruits: ${fruits}`, `\nFrozens: ${frozen}`, ` \nLacticines: ${lacticines}`, `\nCandy: ${candy}`]
+        food = [`Fruits: ${fruits}`, `\nFrozens: ${frozen}`, ` \nDairy: ${dairy}`, `\nSweets: ${sweets}`]
       } while (option != "5");
       break;
     case "2":
@@ -55,8 +55,8 @@ do {
         option = prompt(`Which type of food you want to remove?
       \n1- Fruit
       \n2- Frozen
-      \n3- Lacticine
-      \n4- Candy
+      \n3- Dairy
+      \n4- Sweets
       \n5- Exit
       \n${food}`)
         switch (option) {
@@ -72,13 +72,13 @@ do {
             break
           case "3":
             name = prompt(`What's the name of the lacticine you want to remove?\n${lacticines}`)
-            item = lacticines.indexOf(name)
-            lacticines.splice(item, 1)
+            item = dairy.indexOf(name)
+            dairy.splice(item, 1)
             break
           case "4":
-            name = prompt(`What's the name of the candy you want to remove?\n${candy}`)
-            item = candy.indexOf(name)
-            candy.splice(item, 1)
+            name = prompt(`What's the name of the sweet you want to remove?\n${sweets}`)
+            item = sweets.indexOf(name)
+            sweets.splice(item, 1)
             break
           case "5":
             alert(`Exiting...`)
@@ -86,7 +86,7 @@ do {
           default:
             alert(`Invalid entry, please retry`)
         }
-        food = [`Fruits: ${fruits}`, `\nFrozens: ${frozen}`, ` \nLacticines: ${lacticines}`, `\nCandy: ${candy}`]
+        food = [`Fruits: ${fruits}`, `\nFrozens: ${frozen}`, ` \nLacticines: ${dairy}`, `\nSweets: ${sweets}`]
       } while (option != "5");
       break;
     case "3":
